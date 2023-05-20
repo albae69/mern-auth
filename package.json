@@ -4,7 +4,9 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon backend/server.js",
-    "server": "nodemon backend/server.js"
+    "server": "nodemon backend/server.js",
+    "client": "npm run dev --prefix frontend",
+    "dev": "concurrently \"yarn server\" \"yarn client\""
   },
   "license": "MIT",
   "type": "module",
@@ -18,6 +20,7 @@
     "mongoose": "^7.2.0"
   },
   "devDependencies": {
+    "concurrently": "^8.0.1",
     "nodemon": "^2.0.22"
   }
 }
